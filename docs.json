@@ -60,7 +60,7 @@
         {
           "anchor": "Documentation",
           "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "icon": "https://mintlify.b-cdn.net/v6.6.0/brands/x-twitter.svg"
         },
         {
           "anchor": "Community",
