@@ -58,9 +58,9 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "x-twitter.svg"
+          "anchor": "X",
+          "href": "https://x.com/sinthive/",
+          "icon": "/logo/x-twitter.svg"
         },
         {
           "anchor": "Community",
