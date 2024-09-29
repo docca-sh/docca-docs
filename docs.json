@@ -64,14 +64,19 @@
           "icon": "logo/twitter2"
         },
         {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
+          "anchor": "Discord",
+          "href": "https://discord.gg/cYyeqVQ5j4",
           "icon": "slack"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
+          "anchor": "LinkedIn",
+          "href": "https://www.linkedin.com/company/thesint/",
           "icon": "newspaper"
+        },
+        {
+          "anchor": "Telegram",
+          "href": "https://t.me/sint_news",
+          "icon": "/logo/telegram.svg"
         }
       ]
     }
