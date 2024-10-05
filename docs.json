@@ -61,7 +61,7 @@
         {
           "anchor": "X",
           "href": "https://x.com/sinthive/",
-          "icon": "logo/twitter2"
+          "icon": "x-twitter"
         },
         {
           "anchor": "Discord",
@@ -76,7 +76,7 @@
         {
           "anchor": "Telegram",
           "href": "https://t.me/sint_news",
-          "icon": "/logo/telegram.svg"
+          "icon": "telegram"
         }
       ]
     }
