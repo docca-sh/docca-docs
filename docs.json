@@ -17,14 +17,14 @@
             "group": "Get Started",
             "pages": [
               "index",
-              "SINTBridge",
-              "quickstart",
-              "development"
+              "SINTBridge"
             ]
           },
           {
             "group": "Essentials",
             "pages": [
+              "quickstart",
+              "development",
               "essentials/markdown",
               "essentials/code",
               "essentials/images",
