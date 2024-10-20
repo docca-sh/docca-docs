@@ -69,14 +69,14 @@
           "icon": "discord"
         },
         {
-          "anchor": "LinkedIn",
-          "href": "https://www.linkedin.com/company/thesint/",
-          "icon": "linkedin"
-        },
-        {
           "anchor": "Telegram",
           "href": "https://t.me/sint_news",
           "icon": "telegram"
+        },
+        {
+          "anchor": "LinkedIn",
+          "href": "https://www.linkedin.com/company/thesint/",
+          "icon": "linkedin"
         }
       ]
     }
@@ -89,7 +89,7 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@sint.gg"
       }
     ],
     "primary": {
@@ -101,9 +101,12 @@
   "footer": {
     "socials": {
       "x": "https://x.com/sinthive/",
+      "github": "https://github.com/sint-ai",
       "discord": "https://discord.gg/cYyeqVQ5j4",
+      "telegram": "https://t.me/sint_news",
       "linkedin": "https://www.linkedin.com/company/thesint/",
-      "telegram": "https://t.me/sint_news"     
+      "instagram": "https://www.instagram.com/sint.ig/",
+      "youtube": "https://www.youtube.com/@SINT001"
     }
   }
 }
