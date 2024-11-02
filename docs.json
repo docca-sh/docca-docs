@@ -1,8 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-    "default": "dark",
-    "code": "dark",
   "name": "Next-gen AI Ecosystem",
   "colors": {
     "primary": "#7F64F2",
