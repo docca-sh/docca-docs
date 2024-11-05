@@ -16,13 +16,13 @@
           {
             "group": "Get Started",
             "pages": [
-              "introduction",
-              "SINTBridge"
+              "introduction"
             ]
           },
           {
             "group": "Overview",
             "pages": [
+              "SINTBridge",
               "quickstart",
               "development",
               "essentials/markdown",
