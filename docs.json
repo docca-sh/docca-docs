@@ -14,15 +14,22 @@
         "tab": "Documentation",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "Overview",
             "pages": [
-              "introduction"
+              "introduction",
+              "whitepaper"
             ]
           },
           {
-            "group": "Overview",
+            "group": "Solutions & Tools",
             "pages": [
-              "SINTBridge"
+              "sintbridge"
+            ]
+          },
+          {
+            "group": "Extras",
+            "pages": [
+              "presskit"
             ]
           }
      
@@ -62,7 +69,7 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:support@sint.gg"
+        "href": "mailto:team@sint.gg"
       }
     ],
     "primary": {
