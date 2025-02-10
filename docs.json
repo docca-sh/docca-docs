@@ -17,7 +17,8 @@
             "group": "Overview",
             "pages": [
               "introduction",
-              "whitepaper"
+              "whitepaper",
+              "security"
             ]
           },
           {
