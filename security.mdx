@@ -151,6 +151,12 @@ User → Edge Encryption → Walrus Immutable Storage → Nautilus CVM Runtime �
 
 ## **9 API Security Flow Example**
 
+```md
+POST /v1/inference
+X-SINT-Proof: 0x7a2e...
+X-SINT-Blob: walrus://bafybeih...
+Body: { "prompt": "..." }
+```
 
 - Gateway validates ProofReceipt and attestation before routing.
 
