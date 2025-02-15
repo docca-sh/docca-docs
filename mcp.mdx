@@ -1,0 +1,132 @@
+---
+title: "SINT MCP Marketplace"
+---
+
+# **1. Executive Summary**
+
+The **SINT MCP Marketplace** is an advanced platform for managing and executing Modular Cloud Programs (MCPs). It is designed for high-security applications where modular, on-demand cloud logic must be discoverable and executable by authenticated users or AI agents. The system integrates advanced security models, serverless execution, developer-friendly onboarding, and future Web3 and edge computing capabilities.
+
+### **Key Capabilities:**
+
+- **Confidential Execution**: Hardware-backed compute enclaves (AWS Lambda, KMS encryption, IAM isolation).
+- **Zero Trust Security**: Multi-layer authentication, granular token scoping, and audit logging.
+- **Scalability**: Auto-scaling serverless infrastructure with provisioned concurrency for low-latency use cases.
+- **Extensible API-first Approach**: OpenAPI specifications for each MCP.
+- **Developer and AI Agent Support**: Ready for autonomous agents and human developers.
+
+---
+
+## **2. System Architecture**
+
+### **2.1 Layered Design**
+
+1. **Presentation Layer**
+   - Web (Next.js) UI, CLI tools, chatbot interfaces.
+   - Handles login, service connections, and MCP invocation.
+2. **API Gateway Layer**
+   - AWS API Gateway routes and validates requests.
+   - Uses Cognito/Keycloak JWT validation.
+3. **Orchestration & Business Logic Layer**
+   - Node.js microservice managing routing, session tokens, scope validation, and MCP matching.
+4. **Execution Layer**
+   - AWS Lambda, one per MCP for strict isolation.
+   - Stateless runtime for ephemeral execution.
+5. **Data Layer**
+   - PostgreSQL for metadata and relational data.
+   - DynamoDB for fast lookups and caching.
+   - AWS Secrets Manager for encrypted token storage.
+6. **Monitoring & Logging Layer**
+   - CloudWatch (logs and metrics), Datadog (dashboards), X-Ray (distributed tracing).
+
+### **2.2 Core Interaction Flow**
+
+1. User logs in through Keycloak → obtains JWT session token.
+2. User connects a service (e.g., Google) → OAuth token stored in encrypted vault.
+3. User selects MCP → system verifies required scopes.
+4. MCP request routed through API Gateway → Lambda invoked.
+5. Lambda executes business logic using scoped tokens.
+6. Result returned, logged, and metrics updated.
+
+---
+
+## **3. Security Model**
+
+### **3.1 Authentication & Authorization**
+
+- **Identity Provider**: Keycloak, configured for OAuth 2.1 PKCE.
+- **Session Tokens**: Short-lived JWT with refresh token rotation.
+- **Third-Party Tokens**: Separate encrypted storage per user/service.
+- **Access Scopes**: MCP-specific scope declarations enforced at runtime.
+
+### **3.2 Execution Isolation**
+
+- Each MCP Lambda has:
+  - Dedicated IAM role with least privilege.
+  - VPC-based egress filtering.
+  - No persistent storage (ephemeral only).
+- AWS Shield \+ WAF to prevent DDoS attacks.
+
+### **3.3 Data Protection**
+
+- AES-256 envelope encryption for stored tokens and secrets.
+- All API traffic over HTTPS/TLS 1.3.
+- Structured logging with PII redaction.
+
+---
+
+## **4. Data Model & Storage**
+
+### **4.1 Entities**
+
+- **Users**: Core identity and session data.
+- **MCP Registry**: Metadata, OpenAPI spec links, tags, and owner.
+- **Authorizations**: Linked third-party tokens with scope/expiry.
+- **Executions**: Invocation payloads, responses, and performance metrics.
+- **Feedback**: Ratings and developer-provided comments.
+- **Logs**: Structured event logs with request IDs.
+
+---
+
+## **5. DevOps Pipeline**
+
+### **5.1 CI/CD Steps**
+
+1. **Developer Commit** → GitHub Actions triggered.
+2. **Code Linting & Testing** → Pre-build validation.
+3. **OpenAPI Validation** → Ensures MCP spec compliance.
+4. **Security Scan** → SAST, dependency vulnerability check.
+5. **Build Lambda Package** → Dockerized or ZIP build.
+6. **Deploy to Staging** → Blue/green strategy.
+7. **Integration Tests** → Automated runtime validation.
+8. **Promote to Production** → Canary or full release.
+
+### **5.2 Observability & Incident Response**
+
+- CloudWatch Alarms for latency and error spikes.
+- Datadog dashboards for live performance.
+- Slack PagerDuty integration for incidents.
+- Sentry for front-end and API error tracking.
+
+---
+
+## **6. Edge Cases & Failure Modes**
+
+- **Expired Tokens**: Automatic refresh, fallback to reauthorization.
+- **OAuth Consent Denial**: MCP invocation blocked with user notification.
+- **Cold Start Delays**: Provisioned concurrency and scheduled warmups.
+- **Registry Outage**: Cache-based failover for MCP metadata.
+- **Execution Timeout**: Lambda configured for 30s max execution with fallback messaging.
+
+---
+
+## **7. API Specifications (Condensed)**
+
+### **Endpoints**
+
+- POST /auth/login – Keycloak login.
+- GET /auth/callback – Token exchange.
+- GET /mcp – List MCPs.
+- GET /mcp/{id} – Get MCP metadata.
+- POST /mcp/{id}/invoke – Execute MCP.
+- GET /profile/services – View service connections.
+- POST /profile/services/{service}/connect – Link third-party service.
