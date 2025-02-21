@@ -24,6 +24,7 @@
           {
             "group": "Solutions & Tools",
             "pages": [
+              "mcp-marketplace",
               "sintbridge",
               "sintasibridge"
             ]
