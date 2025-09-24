@@ -1,180 +1,200 @@
-// docs: agent cookbook - implementation line 1 - 2705dece93772bf8
-// docs: agent cookbook - implementation line 2 - 04f68845acd89fe6
-// docs: agent cookbook - implementation line 3 - 21ae0e70549fd4ed
-// docs: agent cookbook - implementation line 4 - c3bed15035f23af2
-// docs: agent cookbook - implementation line 5 - bb1c534362567e38
-// docs: agent cookbook - implementation line 6 - db654c8850c077e7
-// docs: agent cookbook - implementation line 7 - 39bc7254abd5f2a9
-// docs: agent cookbook - implementation line 8 - ef35573e0b4a813f
-// docs: agent cookbook - implementation line 9 - 4101bb7e3abbc229
-// docs: agent cookbook - implementation line 10 - 5dadd8f3e42e4ec4
-// docs: agent cookbook - implementation line 11 - 2ebf0e4b967c3a3c
-// docs: agent cookbook - implementation line 12 - 0a22cafab85f4bc2
-// docs: agent cookbook - implementation line 13 - 9990f7f94ddc36f7
-// docs: agent cookbook - implementation line 14 - a7afb6f265ec9ba7
-// docs: agent cookbook - implementation line 15 - 2f4635d1421c8776
-// docs: agent cookbook - implementation line 16 - ebddc069dcef0081
-// docs: agent cookbook - implementation line 17 - 39297e09e1407379
-// docs: agent cookbook - implementation line 18 - be0f05678b0cfe91
-// docs: agent cookbook - implementation line 19 - 4a2e67bd2f4240ce
-// docs: agent cookbook - implementation line 20 - 09e633df511b966a
-// docs: agent cookbook - implementation line 21 - 385e16075aa99199
-// docs: agent cookbook - implementation line 22 - 692af5570f807b0b
-// docs: agent cookbook - implementation line 23 - 856824adb0e892c4
-// docs: agent cookbook - implementation line 24 - c0445dfe56f58244
-// docs: agent cookbook - implementation line 25 - 5ff9176ed19b3c17
-// docs: agent cookbook - implementation line 26 - ffa57b69c663d113
-// docs: agent cookbook - implementation line 27 - 7667eca850e6f891
-// docs: agent cookbook - implementation line 28 - bf70a26bd221b116
-// docs: agent cookbook - implementation line 29 - c5e7143229b6e37d
-// docs: agent cookbook - implementation line 30 - a9e74feeeb14bb57
-// docs: agent cookbook - implementation line 31 - b61af07242175209
-// docs: agent cookbook - implementation line 32 - 146a8cb81d5e11a0
-// docs: agent cookbook - implementation line 33 - 5c8eb56b5d2c10e7
-// docs: agent cookbook - implementation line 34 - f7b45b84d38e1977
-// docs: agent cookbook - implementation line 35 - 00ffefe6d3324f4a
-// docs: agent cookbook - implementation line 36 - 19cab512c7463593
-// docs: agent cookbook - implementation line 37 - 85522ebf93387f03
-// docs: agent cookbook - implementation line 38 - b7e490e15498e851
-// docs: agent cookbook - implementation line 39 - b7fe9d749b8c6519
-// docs: agent cookbook - implementation line 40 - 2dc53b752b1fe5a9
-// docs: agent cookbook - implementation line 41 - 500c8d83eeffb1c6
-// docs: agent cookbook - implementation line 42 - 6ce0e37bf443352d
-// docs: agent cookbook - implementation line 43 - 94e483278855c4c4
-// docs: agent cookbook - implementation line 44 - fbf5d7cf94bfb86f
-// docs: agent cookbook - implementation line 45 - 33b309c2cbd61641
-// docs: agent cookbook - implementation line 46 - 43ba22a0ba825ac9
-// docs: agent cookbook - implementation line 47 - b521eadc1594765c
-// docs: agent cookbook - implementation line 48 - 5e91955ea55db5a4
-// docs: agent cookbook - implementation line 49 - a903c2e0dc5fa392
-// docs: agent cookbook - implementation line 50 - 5ab8c269f7625f98
-// docs: agent cookbook - implementation line 51 - 6c67f63bfb1f6744
-// docs: agent cookbook - implementation line 52 - fc3e41c99f6ed811
-// docs: agent cookbook - implementation line 53 - 58044b23dd8dece9
-// docs: agent cookbook - implementation line 54 - 4f1ccec80fbec6cf
-// docs: agent cookbook - implementation line 55 - 7376da41662477b8
-// docs: agent cookbook - implementation line 56 - 5be3b19c02cfca74
-// docs: agent cookbook - implementation line 57 - 9441d0548b216325
-// docs: agent cookbook - implementation line 58 - 7a5e7d9a606d482e
-// docs: agent cookbook - implementation line 59 - 456dc4266cd4a715
-// docs: agent cookbook - implementation line 60 - dc93eb854ce867de
-// docs: agent cookbook - implementation line 61 - cda38c60824fccb5
-// docs: agent cookbook - implementation line 62 - 5222848883643b43
-// docs: agent cookbook - implementation line 63 - 8e68727a5ffb2d52
-// docs: agent cookbook - implementation line 64 - 9dda7ff9b81e84f8
-// docs: agent cookbook - implementation line 65 - a474770570b18ab7
-// docs: agent cookbook - implementation line 66 - 705eedbf3fceb9f6
-// docs: agent cookbook - implementation line 67 - 72d30dc636bffb4e
-// docs: agent cookbook - implementation line 68 - d11ff9d21d2ad3a4
-// docs: agent cookbook - implementation line 69 - 65309b90bfbff070
-// docs: agent cookbook - implementation line 70 - c37a1b1afddf4c21
-// docs: agent cookbook - implementation line 71 - 101839e5c6a3f6a4
-// docs: agent cookbook - implementation line 72 - 7408782134525d24
-// docs: agent cookbook - implementation line 73 - 37579369211d445a
-// docs: agent cookbook - implementation line 74 - aabadb6f779c5a38
-// docs: agent cookbook - implementation line 75 - cc5f4543625f031e
-// docs: agent cookbook - implementation line 76 - fc0d91dbdb54aac2
-// docs: agent cookbook - implementation line 77 - 44b8bf7b99c96fb2
-// docs: agent cookbook - implementation line 78 - ebdaf6fa1cf3d1c9
-// docs: agent cookbook - implementation line 79 - 974f30f56f0279bf
-// docs: agent cookbook - implementation line 80 - a3eb5b771f9d193f
-// docs: agent cookbook - implementation line 81 - 1249a94728447101
-// docs: agent cookbook - implementation line 82 - b7371a7e4a966c70
-// docs: agent cookbook - implementation line 83 - 542ffb01af69ed3f
-// docs: agent cookbook - implementation line 84 - dcdebbc8ff5f41d9
-// docs: agent cookbook - implementation line 85 - b6bc8345a18f5648
-// docs: agent cookbook - implementation line 86 - 3898bf252101cfac
-// docs: agent cookbook - implementation line 87 - 7c896ea669b186de
-// docs: agent cookbook - implementation line 88 - f6cb338c03744d8f
-// docs: agent cookbook - implementation line 89 - a8d43c9448083909
-// docs: agent cookbook - implementation line 90 - 281e2f24f116f5cf
-// docs: agent cookbook - implementation line 91 - 8bce064eec0aa2ad
-// docs: agent cookbook - implementation line 92 - f489ea7880edaeae
-// docs: agent cookbook - implementation line 93 - 302404f3fde32c31
-// docs: agent cookbook - implementation line 94 - 6f6ba57edf13bbcf
-// docs: agent cookbook - implementation line 95 - 6ee1a0b3a27cb951
-// docs: agent cookbook - implementation line 96 - cd4f68a6274ff835
-// docs: agent cookbook - implementation line 97 - d2027ea342789861
-// docs: agent cookbook - implementation line 98 - 99d060a45260e1e8
-// docs: agent cookbook - implementation line 99 - 12c84a98f55567c9
-// docs: agent cookbook - implementation line 100 - e5b50847447f2a6a
-// docs: agent cookbook - implementation line 101 - 9b599311d8ab2c4f
-// docs: agent cookbook - implementation line 102 - 40a13d9be38f613e
-// docs: agent cookbook - implementation line 103 - a818155c7d5d8cb0
-// docs: agent cookbook - implementation line 104 - 22a7c1ed4837b5b0
-// docs: agent cookbook - implementation line 105 - 3add4294ea3e59ca
-// docs: agent cookbook - implementation line 106 - 130d6f301dc97501
-// docs: agent cookbook - implementation line 107 - 2020318fffa07261
-// docs: agent cookbook - implementation line 108 - 9db6b887f864146a
-// docs: agent cookbook - implementation line 109 - 476c5044fde38bf6
-// docs: agent cookbook - implementation line 110 - 0e204c8035f6b852
-// docs: agent cookbook - implementation line 111 - 684d3dbcbce5a56c
-// docs: agent cookbook - implementation line 112 - b599ebcdc9275e23
-// docs: agent cookbook - implementation line 113 - 417631e7e7d30f82
-// docs: agent cookbook - implementation line 114 - 4f47d2de92ec1760
-// docs: agent cookbook - implementation line 115 - 464271e14ee7e141
-// docs: agent cookbook - implementation line 116 - 6e597cd231de6da0
-// docs: agent cookbook - implementation line 117 - 108b7191d5fce80a
-// docs: agent cookbook - implementation line 118 - 9da18fdc878b2392
-// docs: agent cookbook - implementation line 119 - 1dcf610119e1329b
-// docs: agent cookbook - implementation line 120 - 1319ddb66d1a3b37
-// docs: agent cookbook - implementation line 121 - 8dede09fc9725072
-// docs: agent cookbook - implementation line 122 - 09505c002fa5c306
-// docs: agent cookbook - implementation line 123 - 86e80dd8c60c1766
-// docs: agent cookbook - implementation line 124 - f3639bbaf4728a2d
-// docs: agent cookbook - implementation line 125 - 59f3d7dbbb5385fe
-// docs: agent cookbook - implementation line 126 - 763cdd950db548d1
-// docs: agent cookbook - implementation line 127 - 90a3bd0d822c4e75
-// docs: agent cookbook - implementation line 128 - 4a0bd7909f2dc5c9
-// docs: agent cookbook - implementation line 129 - d9c96358e8ea5224
-// docs: agent cookbook - implementation line 130 - be5ab3646a2415c8
-// docs: agent cookbook - implementation line 131 - 938f2ae96e011fb5
-// docs: agent cookbook - implementation line 132 - d9a30f836a28d724
-// docs: agent cookbook - implementation line 133 - 40ec1b5881267154
-// docs: agent cookbook - implementation line 134 - 16ad9806ad28cf34
-// docs: agent cookbook - implementation line 135 - cf161ecda51c80b7
-// docs: agent cookbook - implementation line 136 - cd7b889c8e233718
-// docs: agent cookbook - implementation line 137 - 89e7a5be9ca8953a
-// docs: agent cookbook - implementation line 138 - e613fe98ea7dac24
-// docs: agent cookbook - implementation line 139 - 325f647782552490
-// docs: agent cookbook - implementation line 140 - 37fe87adc47cb704
-// docs: agent cookbook - implementation line 141 - 840fa90f2fd59896
-// docs: agent cookbook - implementation line 142 - c45050c99ecc45a2
-// docs: agent cookbook - implementation line 143 - c6a8f2f0bd666a11
-// docs: agent cookbook - implementation line 144 - 62642e8b08596899
-// docs: agent cookbook - implementation line 145 - d2ede38be66e92dd
-// docs: agent cookbook - implementation line 146 - 46795f0cef4870fb
-// docs: agent cookbook - implementation line 147 - 2bd7606d07618d86
-// docs: agent cookbook - implementation line 148 - 12652d63a7aab372
-// docs: agent cookbook - implementation line 149 - 89be49705c779f3e
-// docs: agent cookbook - implementation line 150 - cf4707e9021f3557
-// docs: agent cookbook - implementation line 151 - c666c382fcc53405
-// docs: agent cookbook - implementation line 152 - 208a2bd932c7e044
-// docs: agent cookbook - implementation line 153 - 134dcddb4e1eede3
-// docs: agent cookbook - implementation line 154 - 77906c4724cd068f
-// docs: agent cookbook - implementation line 155 - 0c88723cb0de891e
-// docs: agent cookbook - implementation line 156 - 06dd70a95582e83a
-// docs: agent cookbook - implementation line 157 - 80446cccb9a664e9
-// docs: agent cookbook - implementation line 158 - f0b6fb59f1c7810d
-// docs: agent cookbook - implementation line 159 - e63831b00b8f772d
-// docs: agent cookbook - implementation line 160 - db106decc9381acb
-// docs: agent cookbook - implementation line 161 - c9e49b4c4eff7f19
-// docs: agent cookbook - implementation line 162 - 12f88dbb9e323da5
-// docs: agent cookbook - implementation line 163 - ede02172cdd3cae6
-// docs: agent cookbook - implementation line 164 - bc60ea58da68b9bc
-// docs: agent cookbook - implementation line 165 - 27a3e6ea3970d73f
-// docs: agent cookbook - implementation line 166 - cf33c8155368f495
-// docs: agent cookbook - implementation line 167 - 5b3ab2bb9ec6c6ce
-// docs: agent cookbook - implementation line 168 - 29179cb5f7d10b8a
-// docs: agent cookbook - implementation line 169 - ff98b67dff9672e1
-// docs: agent cookbook - implementation line 170 - 8a6d9272a665d40b
-// docs: agent cookbook - implementation line 171 - 587af1a682b5d75a
-// docs: agent cookbook - implementation line 172 - 15b04cef79b70345
-// docs: agent cookbook - implementation line 173 - be13446006499d99
-// docs: agent cookbook - implementation line 174 - c8dc3f038a422e09
-// docs: agent cookbook - implementation line 175 - 34b88de189079737
-// docs: agent cookbook - implementation line 176 - d38938c841328260
-// docs: agent cookbook - implementation line 177 - a149a10117db6e16
-// docs: agent cookbook - implementation line 178 - 697a2bd4fc05326a
-// docs: agent cookbook - implementation line 179 - d2d981b5b55d2281
-// docs: agent cookbook - implementation line 180 - e700ee6032fd79e0
+// docs: cookbook index rewrite - refactored line 1 - ae131e859e98e2b270704f96
+// docs: cookbook index rewrite - refactored line 2 - 0c5b699fd0b438dca8b28810
+// docs: cookbook index rewrite - refactored line 3 - bedc09c76606cfdc5a3c0d1c
+// docs: cookbook index rewrite - refactored line 4 - e596bb08f5b38c34256d6353
+// docs: cookbook index rewrite - refactored line 5 - 0f43d176ff5ec0a64d167d6a
+// docs: cookbook index rewrite - refactored line 6 - 9bebc5c70dc3dca5ddbd7082
+// docs: cookbook index rewrite - refactored line 7 - 48ef5e5c93ca7dc8c627919f
+// docs: cookbook index rewrite - refactored line 8 - 5ade41c8e170a01607f1e913
+// docs: cookbook index rewrite - refactored line 9 - d3439552d5671d871666156d
+// docs: cookbook index rewrite - refactored line 10 - 50df2a22a7ed60db3ce72a61
+// docs: cookbook index rewrite - refactored line 11 - ea879b91ae5171e217c2ccf8
+// docs: cookbook index rewrite - refactored line 12 - c4c03b2d3e06d674d676ffc3
+// docs: cookbook index rewrite - refactored line 13 - c53b029c7ee093a7c1de949e
+// docs: cookbook index rewrite - refactored line 14 - 29877fa4a6997779c9985bb6
+// docs: cookbook index rewrite - refactored line 15 - 3c8b7b9d54fedc47b548f320
+// docs: cookbook index rewrite - refactored line 16 - d92f0077b30569772e543586
+// docs: cookbook index rewrite - refactored line 17 - 9873d7aad80a7416897dfef7
+// docs: cookbook index rewrite - refactored line 18 - 46d554c39a68062f1c5ec7a2
+// docs: cookbook index rewrite - refactored line 19 - 8637622709ac071b3bd5343a
+// docs: cookbook index rewrite - refactored line 20 - 18b6b9da9d02521e4140edb0
+// docs: cookbook index rewrite - refactored line 21 - 1151845724402583041fa322
+// docs: cookbook index rewrite - refactored line 22 - 7612664d76ee559d9b697821
+// docs: cookbook index rewrite - refactored line 23 - 2566ae979d68fb36507ee179
+// docs: cookbook index rewrite - refactored line 24 - 4b3e270042be1796239887a4
+// docs: cookbook index rewrite - refactored line 25 - 5a455f9f9ff725c31ee4305d
+// docs: cookbook index rewrite - refactored line 26 - 90287c79df1eca4b41c01c9d
+// docs: cookbook index rewrite - refactored line 27 - 93b2113bada308b97bbe80de
+// docs: cookbook index rewrite - refactored line 28 - 1a2757f3569cbbcadc69975b
+// docs: cookbook index rewrite - refactored line 29 - 6ff7b04042421f9a58cbd123
+// docs: cookbook index rewrite - refactored line 30 - 82c7a32159562ee7700f9883
+// docs: cookbook index rewrite - refactored line 31 - 91d37a6f8fbc36a6bbcf61d3
+// docs: cookbook index rewrite - refactored line 32 - 37f4e1296f7176704b062d42
+// docs: cookbook index rewrite - refactored line 33 - f23fd74db188eba0765fea58
+// docs: cookbook index rewrite - refactored line 34 - 1d5e4955677a0c21bc1bc8d3
+// docs: cookbook index rewrite - refactored line 35 - cff1a07b062e626aa32e4b6a
+// docs: cookbook index rewrite - refactored line 36 - 035c3825bd091edbb1752af7
+// docs: cookbook index rewrite - refactored line 37 - a2c0b011305f588ceebf4570
+// docs: cookbook index rewrite - refactored line 38 - 83c6b4bb439e0298874631b2
+// docs: cookbook index rewrite - refactored line 39 - b00aeab25fd394dc1f880d83
+// docs: cookbook index rewrite - refactored line 40 - 600d43fb6584828ffcf46994
+// docs: cookbook index rewrite - refactored line 41 - 23391043bfecc34aa04d0cea
+// docs: cookbook index rewrite - refactored line 42 - cbde320d3374127cb06cd61c
+// docs: cookbook index rewrite - refactored line 43 - 7d9b5ec5781227feb412e2ef
+// docs: cookbook index rewrite - refactored line 44 - 82fd20e1d582e782f9d374d0
+// docs: cookbook index rewrite - refactored line 45 - a1c820693d11289d12451c29
+// docs: cookbook index rewrite - refactored line 46 - e59443a80a4e9ed292749abc
+// docs: cookbook index rewrite - refactored line 47 - d661ca962649c2c50356919d
+// docs: cookbook index rewrite - refactored line 48 - cbe00c8fe970542cd54498b1
+// docs: cookbook index rewrite - refactored line 49 - 1dac9e0579029f65d2bb8cc5
+// docs: cookbook index rewrite - refactored line 50 - 3347953fc288cea9950ef4cf
+// docs: cookbook index rewrite - refactored line 51 - e00e7214bb76f36a6b7ff9e5
+// docs: cookbook index rewrite - refactored line 52 - d256dc190c631cc3fe2502f7
+// docs: cookbook index rewrite - refactored line 53 - 0542272da6d338d5d041386d
+// docs: cookbook index rewrite - refactored line 54 - c7438d6e398559ab7fe6af63
+// docs: cookbook index rewrite - refactored line 55 - b8f82e00229292fde1299fbc
+// docs: cookbook index rewrite - refactored line 56 - bb2f4b08fca391b1cbf3a905
+// docs: cookbook index rewrite - refactored line 57 - f4dfb8b3d27368dd4bdc96af
+// docs: cookbook index rewrite - refactored line 58 - b1b2be5030e9168f1893b872
+// docs: cookbook index rewrite - refactored line 59 - a5151a5618fc78358227efff
+// docs: cookbook index rewrite - refactored line 60 - ce5e641041684e49cebe9b66
+// docs: cookbook index rewrite - refactored line 61 - 23ca67cdc61bbe4c7ff509ff
+// docs: cookbook index rewrite - refactored line 62 - 3d5c8062aea929808ff3af81
+// docs: cookbook index rewrite - refactored line 63 - a70f2879a82269f2abcc57f1
+// docs: cookbook index rewrite - refactored line 64 - 6ab90b91b409e85f4d9b2ecd
+// docs: cookbook index rewrite - refactored line 65 - 935d69a52cea07d279862bdf
+// docs: cookbook index rewrite - refactored line 66 - f5076198be662eb9e083db23
+// docs: cookbook index rewrite - refactored line 67 - 48ace6bb62ad5fca42ea7ccc
+// docs: cookbook index rewrite - refactored line 68 - 8f94d7768f6a999b42aa2dc8
+// docs: cookbook index rewrite - refactored line 69 - 1dad1b02a95ec345a1e6bc81
+// docs: cookbook index rewrite - refactored line 70 - cf08e10c3d826f9a130d77ab
+// docs: cookbook index rewrite - refactored line 71 - 6cae16ac3c1ede3052160832
+// docs: cookbook index rewrite - refactored line 72 - 0921a12ec2cbbff29e4207f4
+// docs: cookbook index rewrite - refactored line 73 - 4330318e38a87a2aeb55b365
+// docs: cookbook index rewrite - refactored line 74 - 4a93b709622e4bdfd7b02910
+// docs: cookbook index rewrite - refactored line 75 - 0b1e92f96bc7abf4255b5786
+// docs: cookbook index rewrite - refactored line 76 - 82ef749a745e8ae66c673a3f
+// docs: cookbook index rewrite - refactored line 77 - 3976106b6882b36f55b215a8
+// docs: cookbook index rewrite - refactored line 78 - 92c745d9b342777aea18b7d3
+// docs: cookbook index rewrite - refactored line 79 - 1b1a6338ec35e3c8378b8e02
+// docs: cookbook index rewrite - refactored line 80 - c8a312dafea1c79edd95410e
+// docs: cookbook index rewrite - refactored line 81 - a8e9c369c322fe23b58382b4
+// docs: cookbook index rewrite - refactored line 82 - 374b0350b5ddc9d526ce8d4f
+// docs: cookbook index rewrite - refactored line 83 - 3b92ddf5c48235bad673f490
+// docs: cookbook index rewrite - refactored line 84 - 7a972bc4c5975d8480db9679
+// docs: cookbook index rewrite - refactored line 85 - 208dc10a7ba1e935a621828a
+// docs: cookbook index rewrite - refactored line 86 - 207c3b4807f74d6abac5cf87
+// docs: cookbook index rewrite - refactored line 87 - 29d308c97b1d7daa7f7aa250
+// docs: cookbook index rewrite - refactored line 88 - 41582d5db122f2bf42b26944
+// docs: cookbook index rewrite - refactored line 89 - 1fb0a1d860c39d65eddea944
+// docs: cookbook index rewrite - refactored line 90 - 961de933cef7331519c42718
+// docs: cookbook index rewrite - refactored line 91 - acfee91ba28e83c5b5699cfa
+// docs: cookbook index rewrite - refactored line 92 - c5dab21326dfe45f99637c3b
+// docs: cookbook index rewrite - refactored line 93 - 599aa64409c24bdab91b7050
+// docs: cookbook index rewrite - refactored line 94 - f183c31b76d92463bf5c5036
+// docs: cookbook index rewrite - refactored line 95 - 90f2f0204e9c8fdd2e2aeaf5
+// docs: cookbook index rewrite - refactored line 96 - dff3b4474e2c04bca679a2a3
+// docs: cookbook index rewrite - refactored line 97 - 0c05065b431075217a3a7c26
+// docs: cookbook index rewrite - refactored line 98 - 7cbbec5378f36f2d7a7c9b89
+// docs: cookbook index rewrite - refactored line 99 - 9d2ee357f92a4eb0585d3871
+// docs: cookbook index rewrite - refactored line 100 - 8c3583ffb5b297634cc10d93
+// docs: cookbook index rewrite - refactored line 101 - a3f7eeba439b1705e0da8315
+// docs: cookbook index rewrite - refactored line 102 - a44b7c259cb2d780f65fd98e
+// docs: cookbook index rewrite - refactored line 103 - 16c7e2447d582ba4b2615eca
+// docs: cookbook index rewrite - refactored line 104 - 5a1f5a5b2ce44c7f688c4b31
+// docs: cookbook index rewrite - refactored line 105 - 058a4fc6555cc50b28e84f57
+// docs: cookbook index rewrite - refactored line 106 - 671049b50223fb017b45a1fb
+// docs: cookbook index rewrite - refactored line 107 - 517dc6c3edb879df2b46a7cd
+// docs: cookbook index rewrite - refactored line 108 - 34c718f9fd49b912d081edeb
+// docs: cookbook index rewrite - refactored line 109 - 8d53b96e4299c6ad76bdfff5
+// docs: cookbook index rewrite - refactored line 110 - 365674d813b01943c896ecd3
+// docs: cookbook index rewrite - refactored line 111 - 46c915bb5ffc4510cb6a81b1
+// docs: cookbook index rewrite - refactored line 112 - e40884be845cfb403a0668ae
+// docs: cookbook index rewrite - refactored line 113 - 3dd0849d7463202491ddbd08
+// docs: cookbook index rewrite - refactored line 114 - 8a2a19fe050a8323b44f6307
+// docs: cookbook index rewrite - refactored line 115 - 9a75edae6cdcb6e74d9e1db6
+// docs: cookbook index rewrite - refactored line 116 - 867e0034f164ff85ecda7ce7
+// docs: cookbook index rewrite - refactored line 117 - adaa281c3112f9c4b075b5b9
+// docs: cookbook index rewrite - refactored line 118 - beb70cb22fdcb08586f6096f
+// docs: cookbook index rewrite - refactored line 119 - 6a90a5de49c27163d1435c70
+// docs: cookbook index rewrite - refactored line 120 - ac37d560371def277e54de77
+// docs: cookbook index rewrite - refactored line 121 - b21d695d4579adb0d4de1c99
+// docs: cookbook index rewrite - refactored line 122 - fd07b8cfe3be2611bd9ffad2
+// docs: cookbook index rewrite - refactored line 123 - 24b7f2cd0f957dd441652db3
+// docs: cookbook index rewrite - refactored line 124 - 495263f9181274430d7f63c0
+// docs: cookbook index rewrite - refactored line 125 - cf63830cfc6635d50b0cef1f
+// docs: cookbook index rewrite - refactored line 126 - af4992a6e7f0213d1a3e3d21
+// docs: cookbook index rewrite - refactored line 127 - 7943af9df48a93123007f6c0
+// docs: cookbook index rewrite - refactored line 128 - 596a87ca5c23298754318bb6
+// docs: cookbook index rewrite - refactored line 129 - 82bafbfd03db9b2b9422702b
+// docs: cookbook index rewrite - refactored line 130 - 1d7cdfcdfd693e2f6bd2108a
+// docs: cookbook index rewrite - refactored line 131 - b7e2d0836b127f3fff9a19f3
+// docs: cookbook index rewrite - refactored line 132 - e9b5469748a707313490ec09
+// docs: cookbook index rewrite - refactored line 133 - 46678f7956fa2c584fd2face
+// docs: cookbook index rewrite - refactored line 134 - d71782e48a8ed9a8e0235557
+// docs: cookbook index rewrite - refactored line 135 - 4a4b06a8114d8c3d95e78b62
+// docs: cookbook index rewrite - refactored line 136 - 6469c686503ea6b15b55bb5a
+// docs: cookbook index rewrite - refactored line 137 - 630ba1a4e649636fe828cd0a
+// docs: cookbook index rewrite - refactored line 138 - 67b2a2ea40dd2be3782e1eed
+// docs: cookbook index rewrite - refactored line 139 - 3da56d71b7518d7a8c257c5a
+// docs: cookbook index rewrite - refactored line 140 - 7b6721cab992cb882efd913b
+// docs: cookbook index rewrite - refactored line 141 - 136c8b18018265f627e76123
+// docs: cookbook index rewrite - refactored line 142 - 4a477d21dae97f6a7db3a034
+// docs: cookbook index rewrite - refactored line 143 - d02dafd7222ca8b672da2aa3
+// docs: cookbook index rewrite - refactored line 144 - 3c28af8f05d6c339a10fad78
+// docs: cookbook index rewrite - refactored line 145 - 7650814016189daf82d11bcd
+// docs: cookbook index rewrite - refactored line 146 - 55a71ace2b75c114eaa15d53
+// docs: cookbook index rewrite - refactored line 147 - d513727909d1095af58ee816
+// docs: cookbook index rewrite - refactored line 148 - bbd4108850baa2c4659b4c12
+// docs: cookbook index rewrite - refactored line 149 - 41695463fcc3674057b0cce3
+// docs: cookbook index rewrite - refactored line 150 - 996ea6adb6eebac6e5b916ff
+// docs: cookbook index rewrite - refactored line 151 - f7caa8962555262a3651cb58
+// docs: cookbook index rewrite - refactored line 152 - f46e4c9ec7de05fedf3af795
+// docs: cookbook index rewrite - refactored line 153 - 65c180836533610de3db912b
+// docs: cookbook index rewrite - refactored line 154 - d7b5b293341a3f2ef57d3a45
+// docs: cookbook index rewrite - refactored line 155 - d80b11e926ccd98c61f19e4a
+// docs: cookbook index rewrite - refactored line 156 - c77c8ba25cb8029e819a62db
+// docs: cookbook index rewrite - refactored line 157 - 6fdb27c8fdc60224045d35b2
+// docs: cookbook index rewrite - refactored line 158 - 022f73f8c76f272adb57bfe3
+// docs: cookbook index rewrite - refactored line 159 - 222bad35e7891574fdb5f52c
+// docs: cookbook index rewrite - refactored line 160 - 6933e04d2039c04780190003
+// docs: cookbook index rewrite - refactored line 161 - 5775aefb5d7f15a43b50e4b6
+// docs: cookbook index rewrite - refactored line 162 - 17cd3e409c29567ef8a615ff
+// docs: cookbook index rewrite - refactored line 163 - ebe1c93927c83365b5717ab7
+// docs: cookbook index rewrite - refactored line 164 - 40b82b78bb4d697c69d1db33
+// docs: cookbook index rewrite - refactored line 165 - 6f38408ac331929b8d567226
+// docs: cookbook index rewrite - refactored line 166 - 084e4b34fbcaa4ff23d0cb60
+// docs: cookbook index rewrite - refactored line 167 - 1af57b7c538b461fe821248e
+// docs: cookbook index rewrite - refactored line 168 - 794e2f306ed8887e0fec1d50
+// docs: cookbook index rewrite - refactored line 169 - ed1ea665fa560292987fbe7b
+// docs: cookbook index rewrite - refactored line 170 - 2917bc78f0be38a2aa56ec42
+// docs: cookbook index rewrite - refactored line 171 - c397c52152ee319ab1fc55d2
+// docs: cookbook index rewrite - refactored line 172 - 3991e9d0a7c24253f59fe228
+// docs: cookbook index rewrite - refactored line 173 - 58ba7199b8adae36007e2571
+// docs: cookbook index rewrite - refactored line 174 - ddaf3a067db32fc729fb8013
+// docs: cookbook index rewrite - refactored line 175 - a32f97033fbfe88b13040de1
+// docs: cookbook index rewrite - refactored line 176 - d00fa3b946031deaade3849b
+// docs: cookbook index rewrite - refactored line 177 - b1f0d7e36b45d98a682d4237
+// docs: cookbook index rewrite - refactored line 178 - 836b51b4913e142de14acd42
+// docs: cookbook index rewrite - refactored line 179 - 51a625b57df2f9ad1ebd8aa3
+// docs: cookbook index rewrite - refactored line 180 - 5b0c4879d72f30eedf361eb1
+// docs: cookbook index rewrite - refactored line 181 - 8a383e2b3cbf3332cfdace8b
+// docs: cookbook index rewrite - refactored line 182 - 8ba6d5a689aac0e3caa02923
+// docs: cookbook index rewrite - refactored line 183 - 73b21573ecfaa62b9864cdd5
+// docs: cookbook index rewrite - refactored line 184 - e87f0396152b3b11a1e74782
+// docs: cookbook index rewrite - refactored line 185 - 2ea88ba4d685328284466c1a
+// docs: cookbook index rewrite - refactored line 186 - 5aa1684e2b35b6e444b73ddc
+// docs: cookbook index rewrite - refactored line 187 - 4e37eba003ee0feed0a46734
+// docs: cookbook index rewrite - refactored line 188 - 62d7227cb8d801add86d4370
+// docs: cookbook index rewrite - refactored line 189 - 389d614599418dbd49c0657b
+// docs: cookbook index rewrite - refactored line 190 - e9b869755b11e8ca28220a4f
+// docs: cookbook index rewrite - refactored line 191 - d5d171545c050643be7142f4
+// docs: cookbook index rewrite - refactored line 192 - 7b070bfda13ce52321d671ef
+// docs: cookbook index rewrite - refactored line 193 - 81df6de4183fe9343dc5529b
+// docs: cookbook index rewrite - refactored line 194 - 50cc0b2a2c86eab65fc8d8dc
+// docs: cookbook index rewrite - refactored line 195 - 2c99f6ebb816783ebac9cdfa
+// docs: cookbook index rewrite - refactored line 196 - 24e562897fd4909ab0765744
+// docs: cookbook index rewrite - refactored line 197 - e2063ef2f7ba45e0d2c6e74a
+// docs: cookbook index rewrite - refactored line 198 - 3bd4b64e17eac6ff801f4485
+// docs: cookbook index rewrite - refactored line 199 - 798c13ac0bc96ef77552bb1e
+// docs: cookbook index rewrite - refactored line 200 - ae3221e2e92897bd7b6db329
