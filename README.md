@@ -1,32 +1,32 @@
-# Mintlify Starter Kit
+# DOCCA documentation
 
-Click on `Use this template` to copy the Mintlify starter kit. The starter kit contains examples including
+Documentation source for [DOCCA](https://docca.work), built with Mintlify.
+Project updates: [@doccalabs](https://x.com/doccalabs).
 
-- Guide pages
-- Navigation
-- Customizations
-- API Reference pages
-- Use of popular components
+## Validate configuration
 
-### Development
+With Node.js 22 or newer, run:
 
-Install the [Mintlify CLI](https://www.npmjs.com/package/mintlify) to preview the documentation changes locally. To install, use the following command
-
-```
-npm i -g mintlify
+```bash
+npm test
 ```
 
-Run the following command at the root of your documentation (where docs.json is)
+No dependency installation is needed. The tests check the current website and
+social links, navigation page files, and configured logo/favicon assets.
+They do not compile MDX or check external website availability.
 
-```
-mintlify dev
-```
+## Edit and preview
 
-### Publishing Changes
+- `docs.json` controls navigation, branding, and project links.
+- Root-level `.mdx` files contain documentation pages.
+- `logo/`, `images/`, and `favicon.svg` contain local assets.
 
-Install our Github App to auto propagate changes from your repo to your deployment. Changes will be deployed to production automatically after pushing to the default branch. Find the link to install on your dashboard. 
+See the [Mintlify local preview guide](https://www.mintlify.com/docs/installation)
+for CLI setup. Run the preview from this directory, where `docs.json` lives.
+After editing, run `npm test` and review the rendered pages before publishing.
 
-#### Troubleshooting
+## Publishing
 
-- Mintlify dev isn't running - Run `mintlify install` it'll re-install dependencies.
-- Page loads as a 404 - Make sure you are running in a folder with `docs.json`
+If this repository is connected to a Mintlify project, its configured deployment
+branch controls publication. Confirm the integration and branch in that project's
+dashboard rather than assuming every push deploys the docs.
